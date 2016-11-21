@@ -12,6 +12,7 @@ namespace Api.Controllers
     {
         public IHttpActionResult Get()
         {
+            // MySecretToken replaced by token stored in Azure application settings
             var token = ConfigurationManager.AppSettings["MySecretToken"];
             return  Ok(token);
         }
